@@ -41,55 +41,54 @@ testem.log
 .DS_Store
 Thumbs.db
 
-## Build results
-bin/
-obj/
-out/
+###############################
+# .NET Core / ASP.NET API
+###############################
+/BackendSignalR/bin/
+/BackendSignalR/obj/
+/BackendSignalR/out/
 
-## User-specific files
-*.user
-*.rsuser
-*.suo
-*.userosscache
-*.sln.docstates
+/BackendSignalR/*.user
+/BackendSignalR/*.rsuser
+/BackendSignalR/*.suo
+/BackendSignalR/*.userosscache
+/BackendSignalR/*.sln.docstates
 
-## Visual Studio Code
+/BackendSignalR/.vs/
+
+/BackendSignalR/*.log
+/BackendSignalR/*.nupkg
+/BackendSignalR/*.snupkg
+/BackendSignalR/project.lock.json
+/BackendSignalR/project.fragment.lock.json
+/BackendSignalR/artifacts/
+
+/BackendSignalR/appsettings.Development.json
+/BackendSignalR/appsettings.Local.json
+
+###############################
+# Angular
+###############################
+/frontendSignalR/node_modules/
+/frontendSignalR/dist/
+/frontendSignalR/tmp/
+/frontendSignalR/out-tsc/
+/frontendSignalR/.angular/cache/
+/frontendSignalR/.angular/
+
+/frontendSignalR/package-lock.json
+/frontendSignalR/yarn.lock
+
+/frontendSignalR/.env
+/frontendSignalR/.env.local
+/frontendSignalR/.env.*.local
+
+###############################
+# General IDE / SO
+###############################
 .vscode/
-
-## Visual Studio
-.vs/
-
-## Logs
-*.log
-
-## Generated files
-*.g.dart
-*.generated.cs
-
-## Paket dependency manager
-.paket/
-paket-files/
-
-## NuGet
-*.nupkg
-*.snupkg
-packages/
-*.nuspec
-*.psmdcp
-project.lock.json
-project.fragment.lock.json
-artifacts/
-
-## ASP.NET Scaffolding
-ScaffoldingReadMe.txt
-
-## DotNet tools
-.dotnet-tools.json
-
-## Config files (local only)
-appsettings.Development.json
-appsettings.Local.json
-
-## Other
+*.swp
+*.swo
+*.DS_Store
 Thumbs.db
 Desktop.ini
