@@ -1,4 +1,4 @@
-using BackendSignalR.Context;
+﻿using BackendSignalR.Context;
 using BackendSignalR.Hubs;
 using BackendSignalR.Workers;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +25,17 @@ builder.Services.AddMvc().AddJsonOptions(x =>
 // Add SignalR
 builder.Services.AddSignalR();
 ///
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngular",
+           policy => policy
+               .WithOrigins("http://localhost:4200") // 👈 origen del frontend
+               .AllowAnyHeader()
+               .AllowAnyMethod()
+               .AllowCredentials()
+       );
+});
 
 var app = builder.Build();
 
