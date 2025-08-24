@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { firstValueFrom, Subscription } from "rxjs";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from "@angular/common/http";
+import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { JsonPipe, NgOptimizedImage } from '@angular/common';
 
 // Project
