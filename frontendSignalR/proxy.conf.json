@@ -1,0 +1,15 @@
+{
+  "/foodhub": {
+    "target": "https://localhost:44338",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "ws": true
+  },
+  "/api":{
+    "target": "https://localhost:44338",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
