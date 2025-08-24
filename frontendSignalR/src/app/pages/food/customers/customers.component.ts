@@ -20,7 +20,7 @@ import { environment } from '../../../../environment/environment';
     FormsModule,
   ],
   templateUrl: './customers.component.html',
-  styleUrl: './customers.component.scss'
+  styleUrl: './customers.component.css'
 })
 export class CustomersComponent {
   availableFood = signal<Array<FoodItem>>([]);
@@ -28,6 +28,7 @@ export class CustomersComponent {
   activeOrdersSubscription?: Subscription;
   showActiveOrders = false;
   tableNumber?: number;
+  showAlert: boolean = false;
 
   constructor(private realtime: FoodRealtimeClientService, private http: HttpClient) {
     this.realtime.connect();
@@ -51,10 +52,27 @@ export class CustomersComponent {
 
   async sendOrder(foodId: number, tableNumber: number) {
     await this.realtime.orderFoodItem(foodId, tableNumber);
+    debugger;
+    this.showAlert = true;
+
+    // Ocultar después de 3 segundos
+    setTimeout(() => {
+      this.showAlert = false;
+    }, 4000);
   }
 
   showActiveOrdersToggle() {
     this.showActiveOrders = !this.showActiveOrders;
+  }
+
+  showModal = false;
+
+  openModal() {
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
   }
 
 }

@@ -18,7 +18,7 @@ import { environment } from '../../../../environment/environment';
     DatePipe,
     FormsModule,],
   templateUrl: './kitchen.component.html',
-  styleUrl: './kitchen.component.scss'
+  styleUrl: './kitchen.component.css'
 })
 export class KitchenComponent {
 
@@ -27,6 +27,7 @@ export class KitchenComponent {
   orders = signal<Order[]>([]);
 
   constructor(private realtime: FoodRealtimeClientService, private http: HttpClient) {
+    this.realtime.connect();
   }
 
   async ngOnInit() {
