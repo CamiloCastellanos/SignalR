@@ -1,13 +1,25 @@
 {
   "/foodhub": {
-    "target": "https://localhost:44338",
+    "target": "https://localhost:7201",
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug",
     "ws": true
   },
-  "/api":{
-    "target": "https://localhost:44338",
+  "/api": {
+    "target": "https://localhost:7201",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/hubs": {
+    "target": "https://localhost:7201",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/hubs/chat": {
+    "target": "https://localhost:7201",
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug"

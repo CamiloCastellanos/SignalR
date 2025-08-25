@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import * as signalR from '@microsoft/signalr';
 import { Observable, Subject } from "rxjs";
 import { FoodRequest, Order, OrderState } from "../model/data-food";
-import { environment } from '../../environment/environment';
-
 
 @Injectable({
   providedIn: 'root'
@@ -13,13 +11,9 @@ export class FoodRealtimeClientService {
   private pendingFoodUpdatedSubject = new Subject<Order[]>();
   ordersUpdated$: Observable<Order[]> = this.pendingFoodUpdatedSubject.asObservable();
 
-  constructor() {
-
-  }
-
   connect() {
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl('http://localhost:4200/foodhub', {
+      .withUrl('http://localhost:7201/foodhub', {
         withCredentials: sessionStorage.getItem('token') != null,
         accessTokenFactory: () => {
           let token = sessionStorage.getItem('token');

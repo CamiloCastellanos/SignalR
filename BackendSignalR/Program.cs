@@ -39,12 +39,16 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI();
+app.UseCors(builder =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    builder
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials()
+        .WithOrigins("https://localhost:7278", "https://localhost:44406");
+});
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
@@ -53,6 +57,7 @@ app.MapControllers();
 //
 // Configure our SignalR hub
 app.MapHub<FoodHub>("/foodhub");
+app.MapHub<ChatHub>("/hubs/chat");
 //
 
 app.Run();
