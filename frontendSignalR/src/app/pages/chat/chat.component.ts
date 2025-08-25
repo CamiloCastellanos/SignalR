@@ -7,13 +7,12 @@ import { NewMessage } from '../../model/new-message';
 
 
 @Component({
-  selector: 'app-chat',
-  standalone: true,
-  imports: [ReactiveFormsModule,
-    NgOptimizedImage,
-    FormsModule,],
-  templateUrl: './chat.component.html',
-  styleUrl: './chat.component.css'
+    selector: 'app-chat',
+    imports: [ReactiveFormsModule,
+        NgOptimizedImage,
+        FormsModule,],
+    templateUrl: './chat.component.html',
+    styleUrl: './chat.component.css'
 })
 export class ChatComponent {
   userName: string = '';

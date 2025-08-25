@@ -9,15 +9,15 @@ import { FoodRealtimeClientService } from '../../../services/food-realtime-clien
 import { environment } from '../../../../environment/environment';
 
 @Component({
-  selector: 'app-kitchen',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    JsonPipe,
-    DatePipe,
-    FormsModule,],
-  templateUrl: './kitchen.component.html',
-  styleUrl: './kitchen.component.css'
+    selector: 'app-kitchen',
+    imports: [
+        ReactiveFormsModule,
+        JsonPipe,
+        DatePipe,
+        FormsModule,
+    ],
+    templateUrl: './kitchen.component.html',
+    styleUrl: './kitchen.component.css'
 })
 export class KitchenComponent {
 

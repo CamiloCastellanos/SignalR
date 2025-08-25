@@ -10,16 +10,15 @@ import { FoodItem, Order } from '../../../model/data-food';
 import { environment } from '../../../../environment/environment';
 
 @Component({
-  selector: 'app-customers',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    NgOptimizedImage,
-    JsonPipe,
-    FormsModule,
-  ],
-  templateUrl: './customers.component.html',
-  styleUrl: './customers.component.css'
+    selector: 'app-customers',
+    imports: [
+        ReactiveFormsModule,
+        NgOptimizedImage,
+        JsonPipe,
+        FormsModule,
+    ],
+    templateUrl: './customers.component.html',
+    styleUrl: './customers.component.css'
 })
 export class CustomersComponent {
   availableFood = signal<Array<FoodItem>>([]);
