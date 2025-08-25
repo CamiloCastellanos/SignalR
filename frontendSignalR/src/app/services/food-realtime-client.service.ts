@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import * as signalR from '@microsoft/signalr';
 import { Observable, Subject } from "rxjs";
 import { FoodRequest, Order, OrderState } from "../model/data-food";
+import { environment } from '../../environment/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class FoodRealtimeClientService {
 
   connect() {
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl('http://localhost:7201/foodhub', {
+      .withUrl(environment.foodHub, {
         withCredentials: sessionStorage.getItem('token') != null,
         accessTokenFactory: () => {
           let token = sessionStorage.getItem('token');

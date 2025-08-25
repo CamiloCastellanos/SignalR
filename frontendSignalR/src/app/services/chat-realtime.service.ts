@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as signalR from '@microsoft/signalr';
 import { NewMessage } from '../model/new-message';
+import { environment } from '../../environment/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class ChatRealtimeService {
 
   connect() {
     this.connection = new signalR.HubConnectionBuilder()
-      .withUrl('https://localhost:7201/hubs/chat', {
+      .withUrl(environment.chatHub, {
         withCredentials: sessionStorage.getItem('token') != null,
         accessTokenFactory: () => {
           let token = sessionStorage.getItem('token');
@@ -34,7 +35,7 @@ export class ChatRealtimeService {
     this.connection.on("LeftUser", message => this.leftUser(message));
   }
 
-  getMessage(){
+  getMessage() {
     return this.conversation;
   }
 
