@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ChatRealtimeService } from '../../services/chat-realtime.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import {} from '@angular/common/http';
 import { NgOptimizedImage } from '@angular/common';
 import { NewMessage } from '../../model/new-message';
 
@@ -10,7 +10,6 @@ import { NewMessage } from '../../model/new-message';
   selector: 'app-chat',
   standalone: true,
   imports: [ReactiveFormsModule,
-    HttpClientModule,
     NgOptimizedImage,
     FormsModule,],
   templateUrl: './chat.component.html',

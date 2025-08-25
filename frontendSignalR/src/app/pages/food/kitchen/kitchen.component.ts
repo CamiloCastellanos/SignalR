@@ -1,5 +1,5 @@
 import { DatePipe, JsonPipe } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Component, signal } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { firstValueFrom, Subscription } from 'rxjs';
@@ -14,7 +14,6 @@ import { environment } from '../../../../environment/environment';
   imports: [
     ReactiveFormsModule,
     JsonPipe,
-    HttpClientModule,
     DatePipe,
     FormsModule,],
   templateUrl: './kitchen.component.html',

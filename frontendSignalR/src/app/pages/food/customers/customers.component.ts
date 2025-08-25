@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { firstValueFrom, Subscription } from "rxjs";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { JsonPipe, NgOptimizedImage } from '@angular/common';
 
 // Project
@@ -14,7 +14,6 @@ import { environment } from '../../../../environment/environment';
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    HttpClientModule,
     NgOptimizedImage,
     JsonPipe,
     FormsModule,
