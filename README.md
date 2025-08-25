@@ -24,13 +24,6 @@ This project is a practice application that integrates **Angular 17**, **.NET Co
 
 The main goal is to learn and showcase how **SignalR** enables instant synchronization of data across different parts of an application.
 
-## 🔧 Tecnologías / Technologies
-- Angular 17
-- .NET Core 8
-- SignalR
-- TypeScript
-- C#
-
 ---
 
 ### 2. Chat Grupal en Tiempo Real / Real-Time Group Chat
@@ -49,18 +42,19 @@ This project is a practice application that integrates **Angular 17**, **.NET Co
 
 The main goal is to learn and showcase how **SignalR** enables instant synchronization of data across different parts of an application.
 
+---
+
 ## 🔧 Tecnologías / Technologies
-- Angular 17
+- Angular 19
 - .NET Core 8
 - SignalR
 - TypeScript
 - C#
 
----
-
 ## ⚙️ Instalación / Installation
 1. Clonar el repositorio:  
    ```bash
    git clone https://github.com/CamiloCastellanos/SignalR
+
 
 
