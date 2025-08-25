@@ -84,22 +84,17 @@
     </div>
 
     <div
-      style="
-        height: 50px;
-        background-color: rgba(86, 157, 238, 0.8);
-        width: 100%;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-      "
+      class="fixed bottom-0 left-0 right-0 h-[50px] bg-blue-500/80 flex items-center justify-center cursor-pointer"
       data-modal-target="default-modal"
       data-modal-toggle="default-modal"
     >
-      <button (click)="showActiveOrdersToggle()">Show Active Orders</button>
+      <button
+        type="button"
+        class="text-white font-semibold"
+        (click)="showActiveOrdersToggle()"
+      >
+        Show Active Orders
+      </button>
     </div>
   </main>
 </section>

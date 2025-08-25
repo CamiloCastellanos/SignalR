@@ -47,7 +47,6 @@ export class CustomersComponent {
 
   async sendOrder(foodId: number, tableNumber: number) {
     await this.realtime.orderFoodItem(foodId, tableNumber);
-    debugger;
     this.showAlert = true;
 
     // Ocultar después de 3 segundos
