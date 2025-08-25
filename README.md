@@ -33,7 +33,7 @@ The main goal is to learn and showcase how **SignalR** enables instant synchroni
 
 ---
 
-### 2. Chat Grupal en Tiempo Real / Real-Time Chat Group
+### 2. Chat Grupal en Tiempo Real / Real-Time Group Chat
 
 **Español:**  
 Este proyecto es una aplicación de práctica que integra **Angular 17**, **.NET Core 8** y **SignalR** para mostrar el poder de la comunicación en tiempo real entre cliente y servidor.  
@@ -62,4 +62,5 @@ The main goal is to learn and showcase how **SignalR** enables instant synchroni
 1. Clonar el repositorio:  
    ```bash
    git clone https://github.com/CamiloCastellanos/SignalR
+
 
