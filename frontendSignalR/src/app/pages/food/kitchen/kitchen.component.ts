@@ -1,4 +1,4 @@
-import { DatePipe, JsonPipe } from '@angular/common';
+import { DatePipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, signal } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -9,15 +9,14 @@ import { FoodRealtimeClientService } from '../../../services/food-realtime-clien
 import { environment } from '../../../../environment/environment';
 
 @Component({
-    selector: 'app-kitchen',
-    imports: [
-        ReactiveFormsModule,
-        JsonPipe,
-        DatePipe,
-        FormsModule,
-    ],
-    templateUrl: './kitchen.component.html',
-    styleUrl: './kitchen.component.css'
+  selector: 'app-kitchen',
+  imports: [
+    ReactiveFormsModule,
+    DatePipe,
+    FormsModule,
+  ],
+  templateUrl: './kitchen.component.html',
+  styleUrl: './kitchen.component.css'
 })
 export class KitchenComponent {
 

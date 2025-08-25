@@ -2,7 +2,6 @@ import { Component, signal } from '@angular/core';
 import { firstValueFrom, Subscription } from "rxjs";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from "@angular/common/http";
-import { JsonPipe, NgOptimizedImage } from '@angular/common';
 
 // Project
 import { FoodRealtimeClientService } from '../../../services/food-realtime-client.service';
@@ -10,15 +9,13 @@ import { FoodItem, Order } from '../../../model/data-food';
 import { environment } from '../../../../environment/environment';
 
 @Component({
-    selector: 'app-customers',
-    imports: [
-        ReactiveFormsModule,
-        NgOptimizedImage,
-        JsonPipe,
-        FormsModule,
-    ],
-    templateUrl: './customers.component.html',
-    styleUrl: './customers.component.css'
+  selector: 'app-customers',
+  imports: [
+    ReactiveFormsModule,
+    FormsModule,
+  ],
+  templateUrl: './customers.component.html',
+  styleUrl: './customers.component.css'
 })
 export class CustomersComponent {
   availableFood = signal<Array<FoodItem>>([]);

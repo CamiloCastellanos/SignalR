@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { ChatRealtimeService } from '../../services/chat-realtime.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {} from '@angular/common/http';
-import { NgOptimizedImage } from '@angular/common';
+import { } from '@angular/common/http';
 import { NewMessage } from '../../model/new-message';
 
 
 @Component({
-    selector: 'app-chat',
-    imports: [ReactiveFormsModule,
-        NgOptimizedImage,
-        FormsModule,],
-    templateUrl: './chat.component.html',
-    styleUrl: './chat.component.css'
+  selector: 'app-chat',
+  imports: [
+    ReactiveFormsModule,
+    FormsModule,
+  ],
+  templateUrl: './chat.component.html',
+  styleUrl: './chat.component.css'
 })
 export class ChatComponent {
   userName: string = '';
